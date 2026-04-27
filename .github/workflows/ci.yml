@@ -23,3 +23,14 @@ jobs:
           curl -X POST -H "Content-Type: application/json" \
           -d '{"content": "🚀 CI executado no repositório calculadora-cicd!"}' \
           "${{ secrets.DISCORD_WEBHOOK }}"
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar testes
+        run: npm test

@@ -1,23 +1,17 @@
-function somar() {
-  let n1 = Number(document.getElementById("num1").value);
-  let n2 = Number(document.getElementById("num2").value);
-  document.getElementById("resultado").innerText = "Resultado: " + (n1 + n2);
+function somar(a, b) {
+  return a + b;
 }
 
-function subtrair() {
-  let n1 = Number(document.getElementById("num1").value);
-  let n2 = Number(document.getElementById("num2").value);
-  document.getElementById("resultado").innerText = "Resultado: " + (n1 - n2);
+function subtrair(a, b) {
+  return a - b;
 }
 
-function multiplicar() {
-  let n1 = Number(document.getElementById("num1").value);
-  let n2 = Number(document.getElementById("num2").value);
-  document.getElementById("resultado").innerText = "Resultado: " + (n1 * n2);
+function multiplicar(a, b) {
+  return a * b;
 }
 
-function dividir() {
-  let n1 = Number(document.getElementById("num1").value);
-  let n2 = Number(document.getElementById("num2").value);
-  document.getElementById("resultado").innerText = "Resultado: " + (n1 / n2);
+function dividir(a, b) {
+  return b !== 0 ? a / b : null;
 }
+
+module.exports = { somar, subtrair, multiplicar, dividir };
