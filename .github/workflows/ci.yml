@@ -20,4 +20,6 @@ jobs:
       - name: Notificar Discord
         if: always()
         run: |
-          curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"🚀 Deploy realizado com sucesso no calculadora-cicd!\"}"
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"content": "🚀 CI executado no repositório calculadora-cicd!"}' \
+          "${{ secrets.DISCORD_WEBHOOK }}"
