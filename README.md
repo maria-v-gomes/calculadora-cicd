@@ -1,1 +1,1 @@
-# calculadora-cicd.
+# calculadora-cicd
