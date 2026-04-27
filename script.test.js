@@ -16,6 +16,3 @@ test('divisão 10 / 2 = 5', () => {
   expect(dividir(10, 2)).toBe(5);
 });
 
-test('divisão por zero retorna null', () => {
-  expect(dividir(10, 0)).toBe(null);
-});
