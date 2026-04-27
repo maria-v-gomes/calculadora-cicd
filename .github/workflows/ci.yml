@@ -16,3 +16,8 @@ jobs:
 
       - name: Verificar arquivos
         run: echo "CI rodando com sucesso!"
+
+      - name: Notificar Discord
+        if: always()
+        run: |
+          curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"🚀 Deploy realizado com sucesso no calculadora-cicd!\"}"
